@@ -8,9 +8,9 @@ Usage
 
 Mount your java app on /app, or inherit from your Dockerfile and ADD /app
 
-run::
+::
 
-	docker run -e MANAGER_USER=admin -e MANAGER_PASSWORD=1234 -v /webapps/my_app:/app apsl/tomcat5
+    docker run -e MANAGER_USER=admin -e MANAGER_PASSWORD=1234 -v /webapps/my_app:/appi -p 8080:8080 apsl/tomcat5
 
 
 Description
@@ -28,12 +28,12 @@ Env vars:
 
 Tomcat manager user / passwd::
 
-	-e MANAGER_USER=admin
-        -e MANAGER_PASSWORD=yourpasswd
+    -e MANAGER_USER=admin
+    -e MANAGER_PASSWORD=yourpasswd
 
 JAVA_OPTS::
 
-	-e JAVA_OPTS=-Xms=512m
+    -e JAVA_OPTS=-Xms=512m
 
 
 And other options from apsl/circusbase: https://registry.hub.docker.com/u/apsl/circusbase/
