@@ -10,7 +10,7 @@ Mount your java app on /app, or inherit from your Dockerfile and ADD /app
 
 ::
 
-    docker run -e MANAGER_USER=admin -e MANAGER_PASSWORD=1234 -v /webapps/my_app:/appi -p 8080:8080 apsl/tomcat5
+    docker run -e MANAGER_USER=admin -e MANAGER_PASSWORD=1234 -v /workspace/my_app:/app -p 8080:8080 apsl/tomcat5
 
 
 Description
