@@ -6,4 +6,3 @@ cmd = /opt/tomcat/bin/tomcat_wrapper.sh
 copy_env = True
 use_sockets = False
 singleton = True
-send_hup = True
