@@ -1,6 +1,6 @@
 FROM java5
 # parents:  apsl/circusbase > apsl/java5
-MANTAINER APSL bcabezas@apsl.net
+MAINTAINER APSL bcabezas@apsl.net
 
 ENV TOMCAT_VERSION 5.5.36
 
@@ -20,7 +20,10 @@ RUN \
    rm -rf /opt/tomcat/webapps/webdav/
 
 ADD conf/tomcat-users.xml.tpl /opt/tomcat/conf/
-ADD tomcat_wrapper.sh /opt/tomcat/bin
+ADD conf/server.xml.tpl /opt/tomcat/conf/
+ADD tomcat_wrapper.sh /opt/tomcat/bin/
+
+ADD setup.d/setup-tomcat /etc/setup.d/
 
 VOLUME ["/opt/tomcat/logs", "/opt/tomcat/work", "/opt/tomcat/temp", "/tmp/hsperfdata_root"
 

@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "---> Configuring tomcat manager auth..."
-envtpl /opt/tomcat/conf/tomcat-users.xml.tpl
